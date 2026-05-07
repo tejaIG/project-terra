@@ -5,8 +5,13 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "dev:fe": "pnpm --filter command-center dev",
+    "dev:be": "cd apps/intelligence-core && uv run uvicorn src.main:app --reload --port 8000",
+    "db:types": "pnpm --filter @terra/database run gen:types",
+    "db:reset": "pnpm --filter @terra/database run db:reset",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md,css,json,yaml,yml}\""
   },
   "devDependencies": {
     "turbo": "latest",

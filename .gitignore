@@ -32,3 +32,14 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.mypy_cache/
+
+# Supabase
+.supabase/
+supabase/.branches/
