@@ -14,6 +14,7 @@ def test_council_compiles():
         "geologist": None,
         "quant": None,
         "oracle": None,
+        "strategist": None,
         "signal": None,
     }
     result = asyncio.run(graph.ainvoke(state))

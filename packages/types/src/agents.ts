@@ -3,7 +3,7 @@ import { z } from "zod";
 export const AgentIdSchema = z.enum(["geologist", "quant", "oracle", "strategist"]);
 export type AgentId = z.infer<typeof AgentIdSchema>;
 
-export const AgentResponseSchema = z.object({
+export const AgentAnalysisSchema = z.object({
   agentId: AgentIdSchema,
   analysis: z.string().min(1),
   sentimentScore: z.number().min(-1).max(1),
@@ -11,4 +11,4 @@ export const AgentResponseSchema = z.object({
   createdAt: z.string().datetime(),
 });
 
-export type AgentResponse = z.infer<typeof AgentResponseSchema>;
+export type AgentAnalysis = z.infer<typeof AgentAnalysisSchema>;

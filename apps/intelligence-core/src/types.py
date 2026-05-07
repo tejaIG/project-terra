@@ -24,7 +24,7 @@ class MarketData(BaseModel):
     timestamp: datetime
 
 
-class AgentResponse(BaseModel):
+class AgentAnalysis(BaseModel):
     agentId: AgentId
     analysis: str
     sentimentScore: float
@@ -54,5 +54,18 @@ class AnalyzeResponse(BaseModel):
     runId: str
     ticker: str
     marketData: MarketData
-    responses: List[AgentResponse]
+    analyses: List[AgentAnalysis]
     finalSignal: Optional[TradeSignal] = None
+
+
+class RunRequest(BaseModel):
+    ticker: str
+
+
+class RunResponse(BaseModel):
+    runId: str
+
+
+class ApproveTradeRequest(BaseModel):
+    runId: str
+    signal: TradeSignal

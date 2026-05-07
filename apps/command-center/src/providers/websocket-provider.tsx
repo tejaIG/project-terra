@@ -3,7 +3,7 @@
 import { createContext, useContext, useMemo } from "react";
 
 interface WebSocketContextValue {
-  url: string;
+  baseUrl: string;
 }
 
 const WebSocketContext = createContext<WebSocketContextValue | null>(null);
@@ -14,7 +14,7 @@ export function WebSocketProvider({
   children: React.ReactNode;
 }): React.JSX.Element {
   const value = useMemo(
-    () => ({ url: process.env.NEXT_PUBLIC_WS_URL ?? "ws://localhost:8000/ws/council/demo" }),
+    () => ({ baseUrl: process.env.NEXT_PUBLIC_WS_URL ?? "ws://localhost:8000" }),
     [],
   );
 
