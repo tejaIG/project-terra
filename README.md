@@ -1,5 +1,8 @@
 # Project Terra
 
+building this for my self.
+
+
 > **Autonomous Indian Mining Intelligence Nexus** — A multi-agent AI framework for commodity-driven equity investment on the NSE & BSE.
 
 ---
